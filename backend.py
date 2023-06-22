@@ -15,7 +15,7 @@ def add_census_data():
     # print(census_data)
 
     global df_census_data
-    df_census_data = pd.read_csv(StringIO(census_data))
+    df_census_data = pd.read_csv(StringIO(census_data), sep = ',')
     print(df_census_data[:3])
 
     # merge_census_and_states_data()
