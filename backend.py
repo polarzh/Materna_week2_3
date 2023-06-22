@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
 def add_census_data():
     census_data = request.files[''].stream.read().decode("utf-8")
-    print(census_data)
+    # print(census_data)
 
     global df_census_data
     df_census_data = pd.read_csv(StringIO(census_data))
