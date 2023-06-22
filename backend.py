@@ -34,6 +34,7 @@ def add_states_data():
 @app.route('/get-state-locations-with-attribute/<attribute>/', methods = ['GET'])
 
 def merge_census_and_states_data(attribute):
+    global df_merged_census_states
     df_merged_census_states = pd.merge( df_states_data, df_census_data)
     if df_census_data.empty() or df_states_data.empty():
         return 'Files werent added to the backend'
